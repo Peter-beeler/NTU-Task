@@ -1,0 +1,65 @@
+<head>
+  <title>Image Classification</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./index.css" />
+</head>
+
+<style>
+  .pred-container {
+    margin-bottom: 20px;
+  }
+
+  .pred-container > div {
+    display: inline-block;
+    margin-right: 20px;
+    vertical-align: top;
+  }
+
+  .row {
+    display: table-row;
+  }
+  .cell {
+    display: table-cell;
+    padding-right: 20px;
+  }
+
+  #file-container {
+    margin-bottom: 20px;
+  }
+</style>
+
+<body>
+  <div class="tfjs-example-container">
+    <section class='title-area'>
+      <h1>Image Classification</h1>
+    </section>
+
+    <section>
+      <p class='section-head'>Description</p>
+      <p>
+        This demo uses the pretrained Resnet101 model based on ImageNet 1000.
+      </p>
+    </section>
+
+    <section>
+      <p class='section-head'>Time</p>
+      <div id="status"></div>
+    </section>
+
+    <section>
+      <p class='section-head'>Model Output</p>
+
+      <div id="file-container" style="display: none">
+        Upload an image: <input type="file" id="files" name="files[]" multiple />
+      </div>
+
+      <div id="predictions"></div>
+
+      <img  id="_img"   width=224 height=224 />
+      <div id ="result"></div>
+    </section>
+
+    <script src="index.js"></script>
+  </div>
+</body>
